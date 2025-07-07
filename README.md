@@ -2,6 +2,9 @@
 
 A modern, interactive portfolio website for Elias (Full Stack Developer).
 
+Check out the NPM Package if you want to make your own portfolio, just like this one!
+[Portfolio Template NPM](https://github.com/elias4044/portfolio-template)
+
 ## Features
 - Responsive, animated design with smooth scrolling
 - Hero, About, Projects, Collaboration, and Contact sections
