@@ -47,4 +47,5 @@ export const config = {
     // FIX: Only run middleware on actual pages, not on _next files, icons, or assets
     "/((?!_next/static|_next/image|favicon.ico|icon.png|robots.txt|sitemap.xml|manifest.json|api/public).*)",
   ],
+  runtime: "nodejs", // FIX: Use nodejs runtime, mainly for eslint.config.mjs because it uses it for some reason.
 };
