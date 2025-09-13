@@ -15,17 +15,23 @@ export function middleware(request: NextRequest) {
     return response
   }
 
-  // Restrict other /api routes (example: only allow same-origin)
-  if (pathname.startsWith("/api/")) {
-    const response = NextResponse.next()
-    response.headers.set("Access-Control-Allow-Origin", request.headers.get("origin") || "")
-    response.headers.set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
-    response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization")
-    if (request.method === "OPTIONS") {
-      return new NextResponse(null, { status: 200, headers: response.headers })
-    }
-    return response
+// Restrict other /api routes (example: only allow same-origin)
+if (pathname.startsWith("/api/")) {
+  const response = NextResponse.next()
+
+  // FIX: safer fallback for missing origin header
+  const origin = request.headers.get("origin") ?? request.nextUrl.origin
+  response.headers.set("Access-Control-Allow-Origin", origin)
+
+  response.headers.set("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS")
+  response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization")
+
+  if (request.method === "OPTIONS") {
+    return new NextResponse(null, { status: 200, headers: response.headers })
   }
+  return response
+}
+
 
   // Security headers for all other routes
   const response = NextResponse.next()
@@ -38,6 +44,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico).*)",
+    // FIX: Only run middleware on actual pages, not on _next files, icons, or assets
+    "/((?!_next/static|_next/image|favicon.ico|icon.png|robots.txt|sitemap.xml|manifest.json|api/public).*)",
   ],
-}
+};
