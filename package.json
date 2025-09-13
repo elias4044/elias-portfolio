@@ -1,6 +1,8 @@
 {
   "name": "elias_portfolio",
   "version": "2.0.0",
+  "description": "Portfolio for Elias",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/elias4044/elias-portfolio"
