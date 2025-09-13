@@ -91,7 +91,7 @@ export default function CoolAchievementsSection() {
               <div className="text-muted-foreground">total_unlocked</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary">1</div>
+              <div className="text-2xl font-bold text-secondary">0</div>
               <div className="text-muted-foreground">mythical</div>
             </div>
             <div className="text-center">
@@ -99,7 +99,7 @@ export default function CoolAchievementsSection() {
               <div className="text-muted-foreground">legendary</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-secondary">2</div>
+              <div className="text-2xl font-bold text-secondary">3</div>
               <div className="text-muted-foreground">epic</div>
             </div>
             <div className="text-center">
