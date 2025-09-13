@@ -1,4 +1,7 @@
+export const runtime = "nodejs";
 import { NextResponse } from "next/server"
+
+
 
 interface AnalyticsData {
   pageViews: {
@@ -26,7 +29,7 @@ interface AnalyticsData {
 
 export async function GET() {
   try {
-    // In a real application, this would fetch from your analytics service
+    // No analytics app has been implemented
     // For now, we'll return mock data
     const analyticsData: AnalyticsData = {
       pageViews: {

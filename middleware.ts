@@ -1,4 +1,11 @@
-import { type NextRequest, NextResponse } from "next/server"
+import { type NextRequest, NextResponse } from "next/server";
+
+export const config = {
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico|icon.png|robots.txt|sitemap.xml|manifest.json|api/public).*)",
+  ],
+  runtime: "nodejs", // ✅ This is valid here
+};
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
@@ -41,10 +48,3 @@ if (pathname.startsWith("/api/")) {
   response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), browsing-topics=()")
   return response
 }
-
-export const config = {
-  matcher: [
-    // FIX: Only run middleware on actual pages, not on _next files, icons, or assets
-    "/((?!_next/static|_next/image|favicon.ico|icon.png|robots.txt|sitemap.xml|manifest.json|api/public).*)",
-  ],
-};

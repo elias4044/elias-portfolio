@@ -1,3 +1,4 @@
+export const runtime = "nodejs";
 import { NextResponse } from "next/server"
 
 interface PortfolioData {
@@ -8,7 +9,6 @@ interface PortfolioData {
   email: string
   social: {
     github: string
-    linkedin: string
     twitter: string
   }
   skills: {
@@ -19,7 +19,6 @@ interface PortfolioData {
   experience: {
     years: number
     totalProjects: number
-    clientsSatisfied: number
   }
   availability: {
     status: "available" | "busy" | "unavailable"
@@ -30,25 +29,23 @@ interface PortfolioData {
 export async function GET() {
   try {
     const portfolioData: PortfolioData = {
-      name: "Your Name",
+      name: "Elias Gulam",
       title: "Full-Stack Developer",
-      bio: "Passionate full-stack developer with 5+ years of experience creating digital solutions that make a difference.",
-      location: "San Francisco, CA",
-      email: "hello@yourname.com",
+      bio: "Passionate full-stack developer with 2+ years of experience creating digital solutions that make a difference.",
+      location: "Halmstad, Sweden",
+      email: "elias4044@proton.me",
       social: {
-        github: "https://github.com/yourusername",
-        linkedin: "https://linkedin.com/in/yourname",
-        twitter: "https://twitter.com/yourusername",
+        github: "https://github.com/elias4044",
+        twitter: "https://twitter.com/elias4044_",
       },
       skills: {
-        frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"],
-        backend: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Redis"],
-        tools: ["Git", "Docker", "AWS", "Vercel", "Figma"],
+        frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Plain HTML+CSS+JS"],
+        backend: ["Node.js", "Python", "Firebase"],
+        tools: ["Git", "Docker", "Firebase", "Vercel", "Figma"],
       },
       experience: {
-        years: 5,
+        years: 3,
         totalProjects: 50,
-        clientsSatisfied: 45,
       },
       availability: {
         status: "available",
