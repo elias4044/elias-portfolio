@@ -3,7 +3,6 @@ import type { Metadata } from "next"
 import Head from "next/head"
 import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
-import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Footer } from "@/components/footer"
@@ -59,7 +58,6 @@ export default function RootLayout({
           </div>
           <ScrollToTop />
         </Suspense>
-        <Analytics />
       </body>
     </html>
   )

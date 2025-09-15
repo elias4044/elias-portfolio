@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Mail, MapPin, Clock, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, MapPin, Clock, Github, Twitter } from "lucide-react"
 import Link from "next/link"
 
 const contactMethods = [

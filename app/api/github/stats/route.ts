@@ -1,4 +1,3 @@
-export const runtime = "nodejs";
 import { NextResponse } from "next/server"
 import { getGitHubAPI, formatNumber } from "@/lib/github"
 

@@ -3,8 +3,7 @@ import { type NextRequest, NextResponse } from "next/server.js";
 export const config = {
   matcher: [
     "/((?!_next/static|_next/image|favicon.ico|icon.png|robots.txt|sitemap.xml|manifest.json|api/public).*)",
-  ],
-  runtime: "nodejs", // ✅ This is valid here
+  ]
 };
 
 export function middleware(request: NextRequest) {

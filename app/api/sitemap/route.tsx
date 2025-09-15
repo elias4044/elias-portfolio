@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server"
-export const runtime = "nodejs";
 
 interface SitemapUrl {
   url: string
