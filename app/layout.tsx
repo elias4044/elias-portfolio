@@ -40,6 +40,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: { // To index the site on google search engine
+    google: "EuW2i0JKrT8nm3UgZXvFEPe8qMSdxKFDrk_2tcOADgI",
+  },
 }
 
 export default function RootLayout({
